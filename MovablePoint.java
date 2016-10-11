@@ -1,3 +1,7 @@
+// i can't figure out nganong muerror sya sa sublime but dili sa cmd
+// i think sayop akong package chuchu
+// check lang unya
+
 package Lab9;
 
 public class MovablePoint implements Movable{
