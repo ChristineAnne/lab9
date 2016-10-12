@@ -1,19 +1,34 @@
-package Lab9;
+package lab9;
 
-import java.awt.*;
+/**
+ * created by Christine Anne Catubig on 10/11/16
+ */
 
+import java.io.IOException;
 
+public class Lab9 {
+    
+    public void sleep(int ms) {
+        try {
+            Thread.sleep(ms);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }
+    }
 
-public class Test{
-	public static void main(String[] args){
-		Movable m1 = new MovablePoint(5, 6, 10, 10);
-		System.out.println(m1);
-		m1.moveLeft();
-		System.out.println(m1);
-
-		Movable m2 = new MovableCircle(2, 1, 2, 2, 20);
-		System.out.println(m2);
-		m2.moveRight();
-		System.out.println(m2);
-	}
+    public void display(Movable p) throws IOException, InterruptedException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        p.render();
+        sleep(2000);
+    }
+    
+    public static void main(String[] args) {
+        MovablePoint m1 = new MovablePoint(15, 16, 5, 5);
+        display(m1);
+        m1.moveDown();
+        display(m1);
+    }
+    
 }
+
+
