@@ -1,6 +1,6 @@
 package Lab9;
 
-public interface Movable{
+public interface Movable extends Drawable {
 	void moveUp();
 	void moveDown();
 	void moveLeft();
