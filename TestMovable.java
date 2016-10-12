@@ -6,7 +6,7 @@ package lab9;
 
 import java.io.IOException;
 
-public class Lab9 {
+public class TestMovable {
     
     public void sleep(int ms) {
         try {
@@ -27,6 +27,11 @@ public class Lab9 {
         display(m1);
         m1.moveDown();
         display(m1);
+        
+        Movable m2 = new MovableCircle(2, 1, 2, 2, 20);
+	    display(m2);
+	    m2.moveRight();
+	    display(m2);
     }
     
 }
