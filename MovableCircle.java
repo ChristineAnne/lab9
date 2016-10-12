@@ -17,25 +17,25 @@ public class MovableCircle implements Movable, Drawable {
     
     @Override
     public void moveUp(){
-        
+        center.moveUp();
     }
     
     @Override
     public void moveDown(){
-        
+        center.moveDown();   
     }
     
     @Override
     public void moveLeft(){
-        
+        center.moveLeft();
     }
     
     @Override
     public void moveRight(){
-        
+        center.moverRight();
     }
      
-    @Override // change to fit circle
+    @Override // change to fit circle, wa pa ni nachange
     public void render(){
         String[][] array = new String[100][100];
         for(int j = 0; j < 100; j++){
